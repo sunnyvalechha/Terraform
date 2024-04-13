@@ -5,13 +5,18 @@ Terraform is an infrastructure as code (IAC) tool that lets you build, change, a
 Alternatives of Terraform / Competitor of terraform
 1. Aws Cloud Formation Template
 2. Azure Resource manager
-3. Openstack Heat Templates
-4. Crossplane
-5. Pulumi
-6. Salt
+3. Google Cloud Deployment Manager
+4. Openstack Heat Templates
+5. Crossplane
+6. Pulumi
+7. Salt
 
 Why Terraform ?
 In all the above options we have to only stick to the specific platform but terraform can run on all cloud and any platform. It is not defined only for specific platform. As a DevOps engineer it is difficult to learn different tools just for 1 purpose. Terraform have a universal approach. Terraform can automate infrastruce on any cloud and on-prem enviroment.
+
+Terraform helps us to Hardening the server.
+
+Server hardening is the process of identifying security vulnerabilities in a Linux server and then configuring changes to reduce them also if all the infrastructure details is written in file and use this file as a code that become 'hardened'.
 
 Terraform is using HashiCorp Configuration Language (HCL) an human readable language can be written in json or yaml.
 
@@ -61,5 +66,12 @@ Terraform plan is a command that generates an execution plan that shows the chan
       terraform destroy
 
   Delete all configuration created through terraform
+
+
+# Providers
+
+Terraform providers are plugins that allow Terraform to interact with remote systems. They are logical abstractions of upstream APIs that are responsible for understanding API interactions and exposing resources.
+
+
 
   
