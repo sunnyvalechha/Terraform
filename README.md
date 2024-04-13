@@ -27,5 +27,39 @@ Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > C
 
 
 
+Practical:
+
+    provider "aws" {
+    region = "us-east-1" 
+  
+    }
+    resource "aws_instance" "example" {
+    ami = "ami-0cd59ecaf368e5ccf"
+    instance_type = "t2.micro"
+    }
 
 
+
+    terraform init
+
+It initializes a working directory, downloads the necessary provider plugins and modules, and sets up the backend for storing infrastructure's state. The terraform init command performs the following actions: Backend initialization, Child module installation, Plugin installation, Creating a lock file called .terraform.lock.hcl, and Generating a new .terraform folder. 
+
+    terraform plan
+
+Terraform plan is a command that generates an execution plan that shows the changes that will be made to infrastructure based on the current code configuration. It does this by:
+* Reading the current state of any remote objects
+* Comparing the current configuration to the previous state
+* Noting any differences
+* Proposing a set of change actions that should make the remote objects match the configuration
+* Presenting a description of the changes necessary to achieve the desired state
+
+
+      terraform apply
+
+  Apply make the actual changes in infrastructure.
+
+      terraform destroy
+
+  Delete all configuration created through terraform
+
+  
