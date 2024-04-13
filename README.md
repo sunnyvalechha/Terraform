@@ -1,3 +1,5 @@
+Ref-Repository: https://github.com/iam-veeramalla/terraform-zero-to-hero
+
 Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking; and high-level components like DNS entries and SaaS features.
 
 Alternatives of Terraform / Competitor of terraform
@@ -16,6 +18,14 @@ Terraform is using HashiCorp Configuration Language (HCL) an human readable lang
 Terraform help us to create highly available infrastructure manually it is difficult to create manually.
 
 Terraform uses API as code approach meaning if we want to automate the infra on AWS, terraform will talk to the Aws API's and apply this API's and create infrastructure.
+
+Setup CodeSpaces:
+
+Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > Same step do with AWS. 
+
+'> Add dev container configuration files' > rebuild > rebuild container > OK 
+
+
 
 
 
