@@ -78,6 +78,12 @@ Providers are categorized into 3 parts:
 * Community Providers - We also can provide the entire provider configuration and opensource will maintain these providers. There is no official backing up by Hashicorp and Partner provider on this.
 
 
+**Multiple Providers** - We can setup multi region infra setup on terraform.
+
+Use keyword 'alias' to implement multi region infra setup on terraform.
+
+
+
 
 
   
