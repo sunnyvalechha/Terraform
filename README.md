@@ -70,7 +70,13 @@ Terraform plan is a command that generates an execution plan that shows the chan
 
 # Providers
 
-Terraform providers are plugins that allow Terraform to interact with remote systems. They are logical abstractions of upstream APIs that are responsible for understanding API interactions and exposing resources.
+Providers are plugins that helps terraform that where it has to create infrastructure, without provider it is not possible to create infra.
+
+Providers are categorized into 3 parts:
+* Official Providers - These providers which Hashicorp actively maintains (Aws. Azure, Google, Kubernetes).
+* Partner Providers - Partners are only maintains the documentation, how anybody can create infra through terraform. (Alibaba cloud and Oracle cloud)
+* Community Providers - We also can provide the entire provider configuration and opensource will maintain these providers. There is no official backing up by Hashicorp and Partner provider on this.
+
 
 
 
