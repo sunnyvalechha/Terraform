@@ -151,3 +151,29 @@ In your other Terraform configuration files, you can then use the aws and azurer
       size = "Standard_A1"
     }
 
+# Variables
+
+Use of Variable in terra: Generally we write a hcl file and put the value of Ami and Instance as it is but this is not a good practise instead of hard coded the value we should make variable because as a DevOps person we might have support to different teams and might couple of times we receive a request to do a same kind of work for different teams so Variable would be very useful here.
+
+In Terraform two types of variable are there.
+
+1. Input Variable
+2. Output Variable
+
+Input and output variables in Terraform are essential for parameterizing and sharing values within your Terraform configurations and modules. They allow you to make your configurations more dynamic, reusable, and flexible.
+
+Input: Suppose we want to pass some informaton to terraform then it is a input variable.
+Output: If we want terraform to print a particular value in the output called as Output variable.
+
+    variable "example_var" {
+      description = "An example input variable"
+      type        = string
+      default     = "default_value"
+    }
+
+    
+* variable > is used to declare an input variable named example_var.
+* description > provides a human-readable description of the variable.
+* type > specifies the data type of the variable (e.g., string, number, list, map, etc.).
+* default > provides a default value for the variable, which is optional.
+
