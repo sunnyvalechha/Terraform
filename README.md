@@ -68,6 +68,17 @@ Terraform plan is a command that generates an execution plan that shows the chan
   Delete all configuration created through terraform
 
 
+Subcommands run with terraform:
+
+    list                List resources in the state
+    mv                  Move an item in the state
+    pull                Pull current state and output to stdout
+    push                Update remote state from a local state file
+    replace-provider    Replace provider in the state
+    rm                  Remove instances from the state
+    show                Show a resource in the state
+
+
 # Providers
 
 Providers are plugins that helps terraform that where it has to create infrastructure, without provider it is not possible to create infra.
@@ -109,3 +120,5 @@ Note:
 * At the time of command "terraform init" notification appear that no config file found than check your location, create a folder, create a .tf file than go inside a folder than run commnand.
 
 * Every region has different ami id of same image os Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
+
+* 
