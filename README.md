@@ -177,3 +177,7 @@ Output: If we want terraform to print a particular value in the output called as
 * type > specifies the data type of the variable (e.g., string, number, list, map, etc.).
 * default > provides a default value for the variable, which is optional.
 
+
+# Modules 
+
+
