@@ -82,8 +82,30 @@ Providers are categorized into 3 parts:
 
 Use keyword 'alias' to implement multi region infra setup on terraform.
 
+    provider "aws" {
+      alias = "us-east-1"
+      region = "us-east-1"
+    }
+
+    provider "aws" {
+      alias = "us-east-2"
+      region = "us-east-2"
+    }
+
+    resource "aws_instance" "example" {
+      ami = "ami-058bd2d568351da34"
+      instance_type = "t2.micro"
+      provider = "aws.us-east-1"
+    }
+
+    resource "aws_instance" "example2" {
+      ami = "ami-058bd2d568351da34"
+      instance_type = "t2.micro"
+      provider = "aws.us-east-2"
+    }
 
 
+Note: 
+* At the time of command "terraform init" notification appear that no config file found than check your location, create a folder, create a .tf file than go inside a folder than run commnand.
 
-
-  
+* Every region has different ami id of same image os Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
