@@ -198,4 +198,9 @@ Install Terraform
     sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
     sudo yum -y install terraform
 
+Setup Aws configure
+
+Git clone repository: https://github.com/sunnyvalechha/terraform-eks.git
+
+
 
