@@ -202,5 +202,19 @@ Setup Aws configure
 
 Git clone repository: https://github.com/sunnyvalechha/terraform-eks.git
 
+    mkdir eks-terraform
+    cd eks-terraform/
+    yum install git -y
+    git clone https://github.com/sunnyvalechha/terraform-eks.git
+    ls -lrth
+    cd terraform-eks/
+    ls -lrth
+    git remote -v
+    git status
 
+    terraform init 
+
+    terraform plan
+
+    terraform apply --auto-approve
 
