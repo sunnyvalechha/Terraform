@@ -24,7 +24,26 @@ Terraform help us to create highly available infrastructure manually it is diffi
 
 Terraform uses API as code approach meaning if we want to automate the infra on AWS, terraform will talk to the Aws API's and apply this API's and create infrastructure.
 
-Setup CodeSpaces:
+**Terraform Block**
+
+* The HCL file contains blocks and arguments
+* A block is defined in curly brackets
+* Contains a set of arguments in a key:value pair format
+* This data is representing the configuration data.
+
+What information block contain - Information of infrastucture of the platform Ex: AWS and the set of resources within that platform that we want to create.
+
+Within the block we can define the resource block and inside the resource block we specify the filename to be created as well its contents.
+
+    resource "local_file" "pet" {
+        filename = "/root/pet.txt"
+        content = "We love pets!"
+    }
+
+![image](https://github.com/sunnyvalechha/Terraform/assets/59471885/ac55a9e8-1204-4de1-9c19-2d470e88be5d)
+
+
+**Setup CodeSpaces**:
 
 Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > Same step do with AWS. 
 
@@ -119,7 +138,7 @@ Use keyword 'alias' to implement multi region infra setup on terraform.
 Note: 
 * At the time of command "terraform init" notification appear that no config file found than check your location, create a folder, create a .tf file than go inside a folder than run commnand.
 
-* Every region has different ami id of same image os Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
+* Every region has different ami id of same image of Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
 
 
 You can use multiple providers in one single terraform project. For example,
