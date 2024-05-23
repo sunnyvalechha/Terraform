@@ -42,6 +42,19 @@ Within the block we can define the resource block and inside the resource block 
 
 ![image](https://github.com/sunnyvalechha/Terraform/assets/59471885/ac55a9e8-1204-4de1-9c19-2d470e88be5d)
 
+Here, resource name can be anything
+
+**Types of Blocks in Terraform**
+
+1. Terraform Block
+2. Provider Block
+3. Data Block
+4. Resource Block
+5. Module Block
+6. Variable Block
+7. Output Block
+8. Locals Block.
+
 
 **Setup CodeSpaces**:
 
