@@ -75,8 +75,7 @@ Practical:
     instance_type = "t2.micro"
     }
 
-
-
+    
     terraform init
 
 It initializes a working directory, downloads the necessary provider plugins and modules, and sets up the backend for storing infrastructure's state. The terraform init command performs the following actions: Backend initialization, Child module installation, Plugin installation, Creating a lock file called .terraform.lock.hcl, and Generating a new .terraform folder. 
@@ -182,6 +181,8 @@ In your other Terraform configuration files, you can then use the aws and azurer
       location = "eastus"
       size = "Standard_A1"
     }
+
+
 
 # Variables
 
