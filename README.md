@@ -220,7 +220,8 @@ Output: If we want terraform to print a particular value in the output called as
     terraform validate     #check for errors
     terraform plan -out=/root/plan.txt
     terraform --help
-
+    terraform providers --help
+    
 All other commands:
 
     console       # Try Terraform expressions at an interactive command prompt
@@ -242,7 +243,21 @@ All other commands:
     untaint       # Remove the 'tainted' state from a resource instance
     version       # Show the current Terraform version
     workspace     # Workspace management
-    
+
+
+# Mutable and Immutable infrastructure
+
+
+# Lifecycle rules
+
+* create_before_destroy
+* prevent_destory
+* ignore_changes
+
+
+# Datasources in terraform
+
+# Meta Arguments
 
 
 
