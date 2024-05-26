@@ -259,6 +259,54 @@ All other commands:
 
 # Meta Arguments
 
+# Version Constraints
+
+Terraform lets you specify a range of acceptable versions for something, it expects a specially formatted string known as a version constraint.
+
+While running 'terraform init' the latest version of plugins are downloaded that are required by the configuration but this is not desired everytime, we might need older plugins becuase the code written in older plugin version. 
+
+    terraform {
+        required_providers {
+            local = {
+                source = "hashicorp/local"
+                version = "1.4.0"
+            }
+        }
+    }
+
+    resource "local_file" "my_pet" {
+        filename = "/root/pet.txt"
+        content = "Pet loved by all"
+    } 
+
+* In above version feild we can mention the version required or not required
+
+      version = "! = 2.0.0"  # do not use this version.
+      version = "< 1.4.0"    # use version lesser than this version.
+      version = "> 1.4.0"    # use version greater than this version.
+      version = "> 1.2.0, < 2.0.0, ! 1.4.0" # greater, lesser, not required.
+      version = "~> 1.2"    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # EKS Cluster through Terraform
