@@ -289,9 +289,25 @@ While running 'terraform init' the latest version of plugins are downloaded that
       
 
 
+# Terraform with AWS 
 
+    resource "aws_iam_user" "users" {
+      name = "mary"
+    }
 
+    provider "aws" {
+        region = "ca-central-1"
+    }
 
+    cat /root/.aws/credentials
+    [default]
+    aws_access_key_id = foo
+    aws_secret_access_key = bar
+
+    resource "aws_iam_user" "users" {
+      name = var.project-sapphire-users[count.index]
+      count = length(var.project-sapphire-users)
+    }
 
 
 
