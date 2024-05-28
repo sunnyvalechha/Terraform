@@ -320,11 +320,6 @@ While running 'terraform init' the latest version of plugins are downloaded that
 
 
 
-
-
-
-
-
 # EKS Cluster through Terraform
 
 Install AWS CLI
