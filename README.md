@@ -20,9 +20,18 @@ Server hardening is the process of identifying security vulnerabilities in a Lin
 
 Terraform is using HashiCorp Configuration Language (HCL) an human readable language can be written in json or yaml.
 
-Terraform help us to create highly available infrastructure manually it is difficult to create manually.
+Terraform help us to create highly available infrastructure manually it is difficult to create.
 
 Terraform uses API as code approach meaning if we want to automate the infra on AWS, terraform will talk to the Aws API's and apply this API's and create infrastructure.
+
+4 things we need to understand to Master.
+
+1. Block
+2. Arguments
+3. Identifiers
+4. Comments
+
+
 
 **Terraform Block**
 
