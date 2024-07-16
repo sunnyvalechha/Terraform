@@ -363,3 +363,29 @@ Git clone repository: https://github.com/sunnyvalechha/terraform-eks.git
 
     terraform apply --auto-approve
 
+
+# Terraform Workspaces
+
+* Terraform starts with a single workspace called "default" and this "default" workspace cannot deleted.
+
+* By default we always works on "default" workspace.
+
+* Use case is, some changes we need to test but we cannot implement directly on Production so we can create a workspace and test there just like git branch.
+
+* Terraform CLI workspaces are completely different from Terraform cloud workspaces.
+
+* In any workspace we work it will create their personal "terraform.tfstate" file
+
+Commands:-
+
+1. terraform workspace show	    # Show current workspace
+2. terraform workspace list	    # List all workspace
+3. terraform workspace new		# Create new
+4. terraform workspace select	# Switch between workspaces
+5. terraform workspace delete	
+
+
+Note: We will assign workspace name as:-
+
+name = "vpc-ssh-${terraform.workspace}"
+
