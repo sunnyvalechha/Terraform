@@ -31,8 +31,6 @@ Terraform uses API as code approach meaning if we want to automate the infra on 
 3. Identifiers
 4. Comments
 
-
-
 **Terraform Block**
 
 * The HCL file contains blocks and arguments
@@ -67,11 +65,11 @@ Here, resource name can be anything
 
 **Setup CodeSpaces**:
 
-Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > Same step do with AWS. 
+Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers.
 
-'> Add dev container configuration files' > rebuild > rebuild container > OK 
+> Add dev container configuration (AWS)
 
-
+> rebuild - rebuild container > OK
 
 Practical:
 
