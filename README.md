@@ -93,7 +93,9 @@ Terraform plan is a command that generates an execution plan that shows the chan
 * Proposing a set of change actions that should make the remote objects match the configuration
 * Presenting a description of the changes necessary to achieve the desired state
 
-Multi-region ec2 instance provision
+Note: Every region has different ami id of same image of Os. Example us-east-1 Suse Linux has different Ami Id than us-west-1.
+
+Multi-region ec2 instance provision use keyword alias
 
 				terraform {
 				required_providers {
@@ -148,42 +150,6 @@ Providers are categorized into 3 parts:
 
 **Multiple Providers** - We can setup multi region infra setup on terraform.
 
-Use keyword 'alias' to implement multi region infra setup on terraform.
-
-    provider "aws" {
-      alias = "us-east-1"
-      region = "us-east-1"
-    }
-
-    provider "aws" {
-      alias = "us-east-2"
-      region = "us-east-2"
-    }
-
-    resource "aws_instance" "example" {
-      ami = "ami-058bd2d568351da34"
-      instance_type = "t2.micro"
-      provider = "aws.us-east-1"
-    }
-
-    resource "aws_instance" "example2" {
-      ami = "ami-058bd2d568351da34"
-      instance_type = "t2.micro"
-      provider = "aws.us-east-2"
-    }
-
-
-Note: 
-* At the time of command "terraform init" notification appear that no config file found than check your location, create a folder, create a .tf file than go inside a folder than run commnand.
-
-* Every region has different ami id of same image of Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
-
-
-You can use multiple providers in one single terraform project. For example,
-
-* Create a providers.tf file in the root directory of your Terraform project.
-* In the providers.tf file, define the AWS and Azure providers. For example:
-
         provider "aws" {
       region = "us-east-1"
     }
@@ -194,20 +160,6 @@ You can use multiple providers in one single terraform project. For example,
       client_secret = "your-azure-client-secret"
       tenant_id = "your-azure-tenant-id"
     }
-
-In your other Terraform configuration files, you can then use the aws and azurerm providers to create resources in AWS and Azure, respectively
-
-    resource "aws_instance" "example" {
-      ami = "ami-0123456789abcdef0"
-      instance_type = "t2.micro"
-    }
-
-    resource "azurerm_virtual_machine" "example" {
-      name = "example-vm"
-      location = "eastus"
-      size = "Standard_A1"
-    }
-
 
 
 # Variables
@@ -300,49 +252,13 @@ While running 'terraform init' the latest version of plugins are downloaded that
         }
     }
 
-    resource "local_file" "my_pet" {
-        filename = "/root/pet.txt"
-        content = "Pet loved by all"
-    } 
-
 * In above version feild we can mention the version required or not required
 
       version = "! = 2.0.0"  # do not use this version.
       version = "< 1.4.0"    # use version lesser than this version.
       version = "> 1.4.0"    # use version greater than this version.
       version = "> 1.2.0, < 2.0.0, ! 1.4.0" # greater, lesser, not required.
-      version = "~> 1.2"    
-      
-
-
-# Terraform with AWS 
-
-    resource "aws_iam_user" "users" {
-      name = "mary"
-    }
-
-    provider "aws" {
-        region = "ca-central-1"
-    }
-
-    cat /root/.aws/credentials
-    [default]
-    aws_access_key_id = foo
-    aws_secret_access_key = bar
-
-    resource "aws_iam_user" "users" {
-      name = var.project-sapphire-users[count.index]
-      count = length(var.project-sapphire-users)
-    }
-
-
-
-
-
-
-
-
-
+      version = "~> 1.2"    # ~> means use any stable version which available
 
 
 
