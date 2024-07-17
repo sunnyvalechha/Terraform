@@ -62,8 +62,7 @@ Here, resource name can be anything
 7. Output Block
 8. Locals Block.
 
-
-**Setup CodeSpaces**:
+# Setup CodeSpaces
 
 Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers.
 
@@ -71,23 +70,21 @@ Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > C
 
 > rebuild - rebuild container > OK
 
-Practical:
+Plugins Installed:
+* HashiCorp HCL
+* Hashicorp Terraform
 
-    provider "aws" {
-    region = "us-east-1" 
-  
-    }
-    resource "aws_instance" "example" {
-    ami = "ami-0cd59ecaf368e5ccf"
-    instance_type = "t2.micro"
-    }
+Our first code to provision ec2 instance
 
-    
+![image](https://github.com/user-attachments/assets/e7dd2173-708e-49aa-b3b3-2d84d14da7c0)
+
     terraform init
-
-It initializes a working directory, downloads the necessary provider plugins and modules, and sets up the backend for storing infrastructure's state. The terraform init command performs the following actions: Backend initialization, Child module installation, Plugin installation, Creating a lock file called .terraform.lock.hcl, and Generating a new .terraform folder. 
-
+    terraform fmt
+    terraform validate
     terraform plan
+    terraform destroy
+
+It initializes a working directory, downloads the necessary provider plugins and modules. The terraform init command performs the following actions: Backend initialization, Child module installation, Plugin installation, Creating a lock file called .terraform.lock.hcl, and Generating a state file new .terraform folder. 
 
 Terraform plan is a command that generates an execution plan that shows the changes that will be made to infrastructure based on the current code configuration. It does this by:
 * Reading the current state of any remote objects
@@ -96,15 +93,37 @@ Terraform plan is a command that generates an execution plan that shows the chan
 * Proposing a set of change actions that should make the remote objects match the configuration
 * Presenting a description of the changes necessary to achieve the desired state
 
+Multi-region ec2 instance provision
 
-      terraform apply
-
-  Apply make the actual changes in infrastructure.
-
-      terraform destroy
-
-  Delete all configuration created through terraform
-
+				terraform {
+				required_providers {
+					aws = {
+						source = "hashicorp/aws"
+						version = "~> 5.0.0"
+					}
+				}
+				}
+				provider "aws" {
+				alias  = "us-east-1"
+				region = "us-east-1"
+				}
+				provider "aws" {
+				alias  = "us-west-1"
+				region = "us-west-1"
+				}
+				resource "aws_instance" "example" {
+				ami           = "ami-0b72821e2f351e396"
+				key_name      = "my-key"
+				instance_type = "t2.micro"
+				provider      = aws.us-east-1
+				}
+				resource "aws_instance" "example-2" {
+				ami           = "ami-0fb83b36371e7dab5"
+				key_name      = "my-key-test"
+				instance_type = "t2.micro"
+				provider      = aws.us-west-1
+				
+				}
 
 Subcommands run with terraform:
 
