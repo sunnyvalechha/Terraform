@@ -219,6 +219,11 @@ Output: If we want terraform to print a particular value in the output called as
 * type > specifies the data type of the variable (e.g., string, number, list, map, etc.).
 * default > provides a default value for the variable, which is optional.
 
+Example: A folder created Variable inside it main.tf and variable.tf created 
+
+![image](https://github.com/user-attachments/assets/235bf903-6111-419d-a96f-371e035e2a36)
+
+![image](https://github.com/user-attachments/assets/ea4a6823-a436-4bf3-896f-d0074c40b233)
 
 # Modules 
 
