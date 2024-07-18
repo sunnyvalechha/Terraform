@@ -191,8 +191,6 @@ In your other Terraform configuration files, you can then use the aws and azurer
       size = "Standard_A1"
     }
 
-
-
 # Variables
 
 Use of Variable in terra: Generally we write a hcl file and put the value of Ami and Instance as it is but this is not a good practise instead of hard coded the value we should make variable because as a DevOps person we might have support to different teams and might couple of times we receive a request to do a same kind of work for different teams so Variable would be very useful here.
@@ -212,7 +210,6 @@ Output: If we want terraform to print a particular value in the output called as
       type        = string
       default     = "default_value"
     }
-
     
 * variable > is used to declare an input variable named example_var.
 * description > provides a human-readable description of the variable.
@@ -224,6 +221,15 @@ Example: A folder created Variable inside it main.tf and variable.tf created
 ![image](https://github.com/user-attachments/assets/235bf903-6111-419d-a96f-371e035e2a36)
 
 ![image](https://github.com/user-attachments/assets/ea4a6823-a436-4bf3-896f-d0074c40b233)
+
+**Variables - Assign when Prompted**
+
+Note: We did not specify default value in Varible.tf so when we run the plan or apply command it will prompt will appear to provide value. Main.tf is the same, no modifications.
+
+![image](https://github.com/user-attachments/assets/ce5cabfa-b91e-4369-a7e6-527dcf0973db)
+
+![image](https://github.com/user-attachments/assets/6d3fca0a-1eab-47db-b894-3baa16b99529)
+
 
 # Modules 
 
