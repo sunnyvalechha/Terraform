@@ -224,11 +224,17 @@ Example: A folder created Variable inside it main.tf and variable.tf created
 
 **Variables - Assign when Prompted**
 
-Note: We did not specify default value in Varible.tf so when we run the plan or apply command it will prompt will appear to provide value. Main.tf is the same, no modifications.
+Note: We did not specify default value in Varible.tf so when we run the plan or apply command a prompt will appear to provide value. Main.tf is the same, no modifications.
 
 ![image](https://github.com/user-attachments/assets/ce5cabfa-b91e-4369-a7e6-527dcf0973db)
 
 ![image](https://github.com/user-attachments/assets/6d3fca0a-1eab-47db-b894-3baa16b99529)
+
+
+**Varialble - Terraform.tfvars**
+
+If the file name is terraform.tfvars, terraform will auto load the variables present in this file by overriding the default value in variables.tf even if we do not specify the variable value, the values taken from tfvars automatically.
+
 
 
 # Modules 
