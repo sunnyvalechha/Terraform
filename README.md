@@ -235,7 +235,12 @@ Note: We did not specify default value in Varible.tf so when we run the plan or 
 
 If the file name is terraform.tfvars, terraform will auto load the variables present in this file by overriding the default value in variables.tf even if we do not specify the variable value, the values taken from tfvars automatically.
 
+Error in below snap, correct 
 
+![image](https://github.com/user-attachments/assets/3384fd1d-95da-4eb7-908d-fcccd6d716d4)
+
+
+**Output Variables - Pending**
 
 # Modules 
 
