@@ -41,20 +41,25 @@ Terraform uses an API as a code approach, meaning if we want to automate the inf
 
 ![image](https://github.com/user-attachments/assets/663c95d0-f0bc-4c76-aff7-fc4a4057d924)
 
+**VScode**: Restart VScode after following the above process, then check for the terraform version
+
+![image](https://github.com/user-attachments/assets/fbec6dcf-c09a-4328-af26-0b2577d4e0db)
 
 
+**An alternate playground to run the Terraform is GitHub Codespaces**
 
+**Setup CodeSpaces**:
 
+Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > Same step do with AWS. 
 
+'> Add dev container configuration files' > rebuild > rebuild container > OK 
 
-4 things we need to understand to Master.
+**4 things we need to understand to Master Terraform**.
 
 1. Block
 2. Arguments
 3. Identifiers
 4. Comments
-
-
 
 **Terraform Block**
 
@@ -74,7 +79,7 @@ Within the block, we can define the resource block, and inside the resource bloc
 
 ![image](https://github.com/sunnyvalechha/Terraform/assets/59471885/ac55a9e8-1204-4de1-9c19-2d470e88be5d)
 
-Here, resource name can be anything
+Here, the resource name can be anything
 
 **Types of Blocks in Terraform**
 
@@ -87,16 +92,7 @@ Here, resource name can be anything
 7. Output Block
 8. Locals Block.
 
-
-**Setup CodeSpaces**:
-
-Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > Same step do with AWS. 
-
-'> Add dev container configuration files' > rebuild > rebuild container > OK 
-
-
-
-Practical:
+**Practical:**
 
     provider "aws" {
     region = "us-east-1" 
@@ -108,30 +104,28 @@ Practical:
     }
 
     
-    terraform init
+**terraform init**
 
-It initializes a working directory, downloads the necessary provider plugins and modules, and sets up the backend for storing infrastructure's state. The terraform init command performs the following actions: Backend initialization, Child module installation, Plugin installation, Creating a lock file called .terraform.lock.hcl, and Generating a new .terraform folder. 
+It initializes a working directory, downloads the necessary provider plugins and modules, and sets up the backend for storing the infrastructure's state. The terraform init command performs the following actions: Backend initialization, Child module installation, Plugin installation, creating a lock file called .terraform.lock.hcl, and generating a new .terraform folder. 
 
-    terraform plan
+**terraform plan**
 
-Terraform plan is a command that generates an execution plan that shows the changes that will be made to infrastructure based on the current code configuration. It does this by:
+Terraform plan is a command that generates an execution plan that shows the changes that will be made to the infrastructure based on the current code configuration. It does this by:
 * Reading the current state of any remote objects
 * Comparing the current configuration to the previous state
 * Noting any differences
 * Proposing a set of change actions that should make the remote objects match the configuration
 * Presenting a description of the changes necessary to achieve the desired state
 
+**terraform apply**
 
-      terraform apply
+  Apply the actual changes in infrastructure.
 
-  Apply make the actual changes in infrastructure.
+**terraform destroy**
 
-      terraform destroy
+  Delete all configurations created through Terraform
 
-  Delete all configuration created through terraform
-
-
-Subcommands run with terraform:
+**Subcommands run with terraform:**
 
     list                List resources in the state
     mv                  Move an item in the state
@@ -144,7 +138,7 @@ Subcommands run with terraform:
 
 # Providers
 
-Providers are plugins that helps terraform that where it has to create infrastructure, without provider it is not possible to create infra.
+Providers are plugins that help terraform that where it has to create infrastructure, without provider it is not possible to create infra.
 
 Providers are categorized into 3 parts:
 * Official Providers - These providers which Hashicorp actively maintains (Aws. Azure, Google, Kubernetes).
