@@ -41,10 +41,9 @@ Terraform uses an API as a code approach, meaning if we want to automate the inf
 
 ![image](https://github.com/user-attachments/assets/663c95d0-f0bc-4c76-aff7-fc4a4057d924)
 
-**VScode**: Restart VScode after following the above process, then check for the terraform version
+**VScode**: Restart VScode after following the above process, then check for the terraform version. Also, you might need to run the code in the folder (C:\terraform-bins)
 
 ![image](https://github.com/user-attachments/assets/fbec6dcf-c09a-4328-af26-0b2577d4e0db)
-
 
 **An alternate playground to run the Terraform is GitHub Codespaces**
 
@@ -68,7 +67,13 @@ Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > C
 * Contains a set of arguments in a key-value pair format
 * This data represents the configuration data.
 
-What information block contains - Information of the infrastructure of the platform Example, AWS, and the set of resources within that platform that we want to create.
+What information block contains - Information of the infrastructure of the platform, like AWS, and the set of resources within that platform that we want to create.
+
+**Arguments** are resource-specific. It is either optional or required. Terraform will give an error if the required argument is missing.
+
+**Attributes** are values exposed by a particular resource. A resource's attributes are assigned to it by the underlying cloud provider or API
+
+**Meta-arguments** Terraform-specific arguments 
 
 Within the block, we can define the resource block, and inside the resource block, we specify the filename to be created as well as its contents.
 
@@ -81,7 +86,7 @@ Within the block, we can define the resource block, and inside the resource bloc
 
 Here, the resource name can be anything
 
-**Types of Blocks in Terraform**
+**Types of Blocks in Terraform / Top-level blocks**
 
 1. Terraform Block
 2. Provider Block
@@ -91,6 +96,11 @@ Here, the resource name can be anything
 6. Variable Block
 7. Output Block
 8. Locals Block.
+
+All are the same - Terraform block / Terraform Setting block / Terraform configuration block 
+
+
+
 
 **Practical:**
 
