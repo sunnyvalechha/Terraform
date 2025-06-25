@@ -1,6 +1,6 @@
 Ref-Repository: https://github.com/iam-veeramalla/terraform-zero-to-hero
 
-Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking; and high-level components like DNS entries and SaaS features.
+Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking, and high-level components like DNS entries and SaaS features.
 
 Alternatives to Terraform / Competitors of Terraform
 1. AWS CloudFormation Template
@@ -17,17 +17,19 @@ In all the above options, we have to stick only to the specific platform, but Te
 
 Terraform helps us to harden the server.
 
-Server hardening is the process of identifying security vulnerabilities in a Linux server and then configuring changes to reduce them Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
+Server hardening is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
 
 Terraform uses HashiCorp Configuration Language (HCL), a human-readable language that can be written in JSON or YAML.
 
-Terraform help us to create highly available infrastructure It is difficult to create.
+Terraform helps us create highly available infrastructure. It is difficult to create.
 
-Terraform uses API as code approach meaning if we want to automate the infra on AWS, terraform will talk to the Aws API's and apply this API's and create infrastructure.
+Terraform uses an API as a code approach, meaning if we want to automate the infrastructure on AWS, Terraform will talk to the AWS API's and apply these API's and create infrastructure.
 
-VScode plugin for Terraform: 
+**VScode plugin for Terraform: ** Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
 
-Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
+**AWS Cli: ** https://awscli.amazonaws.com/AWSCLIV2.msi
+
+
 
 4 things we need to understand to Master.
 
@@ -42,12 +44,12 @@ Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
 
 * The HCL file contains blocks and arguments
 * A block is defined in curly brackets
-* Contains a set of arguments in a key:value pair format
-* This data is representing the configuration data.
+* Contains a set of arguments in a key-value pair format
+* This data represents the configuration data.
 
-What information block contain - Information of infrastucture of the platform Ex: AWS and the set of resources within that platform that we want to create.
+What information block contains - Information of the infrastructure of the platform Example, AWS, and the set of resources within that platform that we want to create.
 
-Within the block we can define the resource block and inside the resource block we specify the filename to be created as well its contents.
+Within the block, we can define the resource block, and inside the resource block, we specify the filename to be created as well as its contents.
 
     resource "local_file" "pet" {
         filename = "/root/pet.txt"
