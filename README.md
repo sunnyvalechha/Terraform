@@ -25,6 +25,10 @@ Terraform help us to create highly available infrastructure It is difficult to c
 
 Terraform uses API as code approach meaning if we want to automate the infra on AWS, terraform will talk to the Aws API's and apply this API's and create infrastructure.
 
+VScode plugin for Terraform: 
+
+Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
+
 4 things we need to understand to Master.
 
 1. Block
