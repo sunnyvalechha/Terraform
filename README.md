@@ -1,8 +1,8 @@
 Ref-Repository: https://github.com/iam-veeramalla/terraform-zero-to-hero
 
-Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking, and high-level components like DNS entries and SaaS features.
+**Terraform** is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking, and high-level components like DNS entries and SaaS features.
 
-Alternatives to Terraform / Competitors of Terraform
+**Alternatives to Terraform / Competitors of Terraform**
 1. AWS CloudFormation Template
 2. Azure Resource Manager
 3. Google Cloud Deployment Manager
@@ -11,13 +11,13 @@ Alternatives to Terraform / Competitors of Terraform
 6. Pulumi
 7. Salt
 
-Why Terraform?
+**Why Terraform?**
 
 In all the above options, we have to stick only to the specific platform, but Terraform can run on all clouds and any platform. It is not defined only for a specific platform. As a DevOps engineer, it is difficult to learn different tools just for 1 purpose. Terraform has a universal approach. Terraform can automate infrastructure on any cloud and on-prem environment.
 
 Terraform helps us to harden the server.
 
-Server hardening is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
+**Server hardening** is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
 
 Terraform uses HashiCorp Configuration Language (HCL), a human-readable language that can be written in JSON or YAML.
 
@@ -25,9 +25,22 @@ Terraform helps us create highly available infrastructure. It is difficult to cr
 
 Terraform uses an API as a code approach, meaning if we want to automate the infrastructure on AWS, Terraform will talk to the AWS API's and apply these API's and create infrastructure.
 
-**VScode plugin for Terraform: ** Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
+**VScode plugin for Terraform:** Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
 
-**AWS Cli: ** https://awscli.amazonaws.com/AWSCLIV2.msi
+**AWS Cli:** https://awscli.amazonaws.com/AWSCLIV2.msi
+
+**Terraform download on Windows**: https://developer.hashicorp.com/terraform/install
+
+* Extract files once downloaded > Copy the terraform.exe file > Create a folder in the C drive (terraform-bins) > Paste the terraform.exe file > Copy folder location (C:\terraform-bins)
+* Search for "Environment variables" > Click on "Environment variables" > Click on "Path" > Edit > New > Paste the location path (C:\terraform-bins) > OK > OK
+* Open cmd prompt > Run "terraform version"
+* Must get the version number
+
+![image](https://github.com/user-attachments/assets/c2b0c7e5-50df-477a-b91f-1515f41afa7d)
+
+
+
+
 
 
 
