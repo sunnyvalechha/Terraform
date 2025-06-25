@@ -35,8 +35,11 @@ Terraform uses an API as a code approach, meaning if we want to automate the inf
 * Search for "Environment variables" > Click on "Environment variables" > Click on "Path" > Edit > New > Paste the location path (C:\terraform-bins) > OK > OK
 * Open cmd prompt > Run "terraform version"
 * Must get the version number
+* Same time verify the AWS Cli also
 
 ![image](https://github.com/user-attachments/assets/c2b0c7e5-50df-477a-b91f-1515f41afa7d)
+
+![image](https://github.com/user-attachments/assets/663c95d0-f0bc-4c76-aff7-fc4a4057d924)
 
 
 
