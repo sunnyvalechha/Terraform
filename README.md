@@ -2,25 +2,26 @@ Ref-Repository: https://github.com/iam-veeramalla/terraform-zero-to-hero
 
 Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking; and high-level components like DNS entries and SaaS features.
 
-Alternatives of Terraform / Competitor of terraform
-1. Aws Cloud Formation Template
-2. Azure Resource manager
+Alternatives to Terraform / Competitors of Terraform
+1. AWS CloudFormation Template
+2. Azure Resource Manager
 3. Google Cloud Deployment Manager
-4. Openstack Heat Templates
+4. OpenStack Heat Templates
 5. Crossplane
 6. Pulumi
 7. Salt
 
-Why Terraform ?
-In all the above options we have to only stick to the specific platform but terraform can run on all cloud and any platform. It is not defined only for specific platform. As a DevOps engineer it is difficult to learn different tools just for 1 purpose. Terraform have a universal approach. Terraform can automate infrastruce on any cloud and on-prem enviroment.
+Why Terraform?
 
-Terraform helps us to Hardening the server.
+In all the above options, we have to stick only to the specific platform, but Terraform can run on all clouds and any platform. It is not defined only for a specific platform. As a DevOps engineer, it is difficult to learn different tools just for 1 purpose. Terraform has a universal approach. Terraform can automate infrastructure on any cloud and on-prem environment.
 
-Server hardening is the process of identifying security vulnerabilities in a Linux server and then configuring changes to reduce them also if all the infrastructure details is written in file and use this file as a code that become 'hardened'.
+Terraform helps us to harden the server.
 
-Terraform is using HashiCorp Configuration Language (HCL) an human readable language can be written in json or yaml.
+Server hardening is the process of identifying security vulnerabilities in a Linux server and then configuring changes to reduce them Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
 
-Terraform help us to create highly available infrastructure manually it is difficult to create.
+Terraform uses HashiCorp Configuration Language (HCL), a human-readable language that can be written in JSON or YAML.
+
+Terraform help us to create highly available infrastructure It is difficult to create.
 
 Terraform uses API as code approach meaning if we want to automate the infra on AWS, terraform will talk to the Aws API's and apply this API's and create infrastructure.
 
