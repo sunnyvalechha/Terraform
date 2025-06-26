@@ -49,9 +49,16 @@ Terraform uses an API as a code approach, meaning if we want to automate the inf
 
 **Setup CodeSpaces**:
 
-Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar '> Add dev container configuration files' > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > Same step do with AWS. 
+Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar write "**> Add**" It give option like "Add dev container configuration files" > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > **Same step do for AWS.** '> Add dev container configuration files' > rebuild > rebuild container > OK 
 
-'> Add dev container configuration files' > rebuild > rebuild container > OK 
+![image](https://github.com/user-attachments/assets/e2b9a1b8-3751-4b35-a661-90b75a83b9d3)
+
+![image](https://github.com/user-attachments/assets/eefde59e-e85a-4b52-a5d5-f4e8cc94a5d7)
+
+![image](https://github.com/user-attachments/assets/6b6ecc74-7a37-4b43-b7a3-64309ffdd38b)
+
+![image](https://github.com/user-attachments/assets/66f06163-5a6e-40ca-8476-98cca9940c6f)
+
 
 **4 things we need to understand to Master Terraform**.
 
