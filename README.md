@@ -319,9 +319,9 @@ All other commands:
 
 # Version Constraints
 
-Terraform lets you specify a range of acceptable versions for something, it expects a specially formatted string known as a version constraint.
+Terraform lets you specify a range of acceptable versions for something; it expects a specially formatted string known as a version constraint.
 
-While running 'terraform init' the latest version of plugins are downloaded that are required by the configuration but this is not desired everytime, we might need older plugins becuase the code written in older plugin version. 
+While running 'terraform init' the latest version of plugins are downloaded that are required by the configuration, but this is not desired every time, we might need older plugins becuase the code written in older plugin version. 
 
     terraform {
         required_providers {
@@ -337,13 +337,17 @@ While running 'terraform init' the latest version of plugins are downloaded that
         content = "Pet loved by all"
     } 
 
-* In above version feild we can mention the version required or not required
+* In the above version field we can mention the version required or not required
 
       version = "! = 2.0.0"  # do not use this version.
-      version = "< 1.4.0"    # use version lesser than this version.
+      version = "< 1.4.0"    # use a version less than this version.
       version = "> 1.4.0"    # use version greater than this version.
       version = "> 1.2.0, < 2.0.0, ! 1.4.0" # greater, lesser, not required.
-      version = "~> 1.2"    
+      version = "~> 1.2"      # Any stable version greater than 1.2.*. So here "*" will be modified
+
+Note: When using the "~>" sign, ensure that you specify the minor version; otherwise, it will upgrade to the major version, as shown above. For example, 1.2. "2" is the major version, and 1.2.11. "11" is the minor version. We always wanted it to automatically use the latest minor version, not the major version.
+
+
       
 
 
