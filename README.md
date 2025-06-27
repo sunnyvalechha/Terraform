@@ -93,6 +93,37 @@ Within the block, we can define the resource block, and inside the resource bloc
 
 Here, the resource name can be anything
 
+# Terraform Commands:
+    terraform init
+    terraform plan
+    terraform apply
+    terraform validate     #check for errors
+    terraform plan -out=/root/plan.txt
+    terraform --help
+    terraform providers --help
+    
+**All other commands:**
+
+    console       # Try Terraform expressions at an interactive command prompt
+    fmt           # Reformat your configuration in the standard style
+    force-unlock  # Release a stuck lock on the current workspace
+    get           # Install or upgrade remote Terraform modules
+    graph         # Generate a Graphviz graph of the steps in an operation
+    import        # Associate existing infrastructure with a Terraform resource
+    login         # Obtain and save credentials for a remote host
+    logout        # Remove locally-stored credentials for a remote host
+    metadata      # Metadata related commands
+    output        # Show output values from your root module
+    providers     # Show the providers required for this configuration
+    refresh       # Update the state to match remote systems
+    show          # Show the current state or a saved plan
+    state         # Advanced state management
+    taint         # Mark a resource instance as not fully functional
+    test          # Experimental support for module integration testing
+    untaint       # Remove the 'tainted' state from a resource instance
+    version       # Show the current Terraform version
+    workspace     # Workspace management
+
 **Types of Blocks in Terraform / Top-level blocks**
 
 1. Terraform Block
@@ -104,10 +135,7 @@ Here, the resource name can be anything
 7. Output Block
 8. Locals Block.
 
-All are the same - Terraform block / Terraform Setting block / Terraform configuration block 
-
-
-
+All are the same - Terraform block / Terraform Setting block / Terraform configuration block
 
 **Practical:**
 
@@ -155,17 +183,17 @@ Terraform plan is a command that generates an execution plan that shows the chan
 
 # Providers
 
-Providers are plugins that help terraform that where it has to create infrastructure, without provider it is not possible to create infra.
+Providers are plugins that help Terraform that where it has to create infrastructure. Without provider, it is not possible to create infrastructure.
 
 Providers are categorized into 3 parts:
 * Official Providers - These providers which Hashicorp actively maintains (Aws. Azure, Google, Kubernetes).
 * Partner Providers - Partners are only maintains the documentation, how anybody can create infra through terraform. (Alibaba cloud and Oracle cloud)
-* Community Providers - We also can provide the entire provider configuration and opensource will maintain these providers. There is no official backing up by Hashicorp and Partner provider on this.
+* Community Providers - We can also provide the entire provider configuration, and opensource will maintain these providers. There is no official backing up by Hashicorp and Partner provider on this.
 
 
-**Multiple Providers** - We can setup multi region infra setup on terraform.
+**Multiple Providers** - We can set multi-region infrastructure on Terraform.
 
-Use keyword 'alias' to implement multi region infra setup on terraform.
+Use the keyword 'alias' to implement a multi-region infrastructure setup on Terraform.
 
     provider "aws" {
       alias = "us-east-1"
@@ -192,15 +220,15 @@ Use keyword 'alias' to implement multi region infra setup on terraform.
 * This alias can be anything like ABC, XYZ, it will read the value from the region only
 
 Note: 
-* At the time of command "terraform init", a notification appears that no config file is found, then check your location, create a folder, create a .tf file than go inside a folder than run commnand.
+* At the time of command "terraform init", a notification appears that no config file is found, then check your location, create a folder, create a .tf file, then go inside the folder and run the command.
 
-* Every region has different ami id of same image of Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
+* Every region has a different ami ID of the same image of Os. Example: us-east-1 Suse Linux has a different AMI ID than us-east-2. So you have to change in script also.
 
 
-You can use multiple providers in one single terraform project. For example,
+You can use multiple providers in a single Terraform project. For example,
 
-* Create a providers.tf file in the root directory of your Terraform project.
-* In the providers.tf file, define the AWS and Azure providers. For example:
+* Create a provider.tf file in the root directory of your Terraform project.
+* In the providers.tf file defines the AWS and Azure providers. For example:
 
         provider "aws" {
       region = "us-east-1"
@@ -320,37 +348,14 @@ Note: Keep the main.tf in parent folder like Day-2 else it will throw error
 ![Uploading image.png…]()
 
 
+# Terraform State
 
-# Terraform Commands:
-    terraform init
-    terraform plan
-    terraform apply
-    terraform validate     #check for errors
-    terraform plan -out=/root/plan.txt
-    terraform --help
-    terraform providers --help
-    
-All other commands:
+The state file is the Heart of Terraform. Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real-world resources to your configuration, keep track of metadata, and improve performance for large infrastructures.
 
-    console       # Try Terraform expressions at an interactive command prompt
-    fmt           # Reformat your configuration in the standard style
-    force-unlock  # Release a stuck lock on the current workspace
-    get           # Install or upgrade remote Terraform modules
-    graph         # Generate a Graphviz graph of the steps in an operation
-    import        # Associate existing infrastructure with a Terraform resource
-    login         # Obtain and save credentials for a remote host
-    logout        # Remove locally-stored credentials for a remote host
-    metadata      # Metadata related commands
-    output        # Show output values from your root module
-    providers     # Show the providers required for this configuration
-    refresh       # Update the state to match remote systems
-    show          # Show the current state or a saved plan
-    state         # Advanced state management
-    taint         # Mark a resource instance as not fully functional
-    test          # Experimental support for module integration testing
-    untaint       # Remove the 'tainted' state from a resource instance
-    version       # Show the current Terraform version
-    workspace     # Workspace management
+Whenever we execute terraform apply or terraform plan, before applying it will go to the Terraform state file and check in the state file what infrastructure is already created and what new infrastructure it has to create, so using the state file, it will compare the difference. It will update the tag 
+
+**Drawbacks of state file:**
+
 
 
 # Mutable and Immutable infrastructure
