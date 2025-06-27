@@ -180,18 +180,19 @@ Use keyword 'alias' to implement multi region infra setup on terraform.
     resource "aws_instance" "example" {
       ami = "ami-058bd2d568351da34"
       instance_type = "t2.micro"
-      provider = "aws.us-east-1"        # aws.<provider-name>
+      provider = "aws.us-east-1"        # aws.<alias>    
     }
 
     resource "aws_instance" "example2" {
       ami = "ami-058bd2d568351da34"
       instance_type = "t2.micro"
-      provider = "aws.us-east-2"        # aws.<provider-name>
+      provider = "aws.us-east-2"        # aws.<alias>
     }
 
+* This alias can be anything like ABC, XYZ, it will read the value from the region only
 
 Note: 
-* At the time of command "terraform init" notification appear that no config file found than check your location, create a folder, create a .tf file than go inside a folder than run commnand.
+* At the time of command "terraform init", a notification appears that no config file is found, then check your location, create a folder, create a .tf file than go inside a folder than run commnand.
 
 * Every region has different ami id of same image of Os. Example us-east-1 Suse Linux has different Ami Id than us-east-2. So you have to change in script also.
 
@@ -229,15 +230,15 @@ In your other Terraform configuration files, you can then use the aws and azurer
 
 Use of Variable in terra: Generally we write a hcl file and put the value of Ami and Instance as it is but this is not a good practise instead of hard coded the value we should make variable because as a DevOps person we might have support to different teams and might couple of times we receive a request to do a same kind of work for different teams so Variable would be very useful here.
 
-In Terraform two types of variable are there.
+In Terraform two types of variables are there.
 
 1. Input Variable
 2. Output Variable
 
-Input and output variables in Terraform are essential for parameterizing and sharing values within your Terraform configurations and modules. They allow you to make your configurations more dynamic, reusable, and flexible.
+Input and output variables in Terraform are essential for parameterizing and sharing values within your Terraform configurations and modules. Variables allow you to make your configurations more dynamic, reusable, and flexible.
 
-Input: Suppose we want to pass some informaton to terraform then it is a input variable.
-Output: If we want terraform to print a particular value in the output called as Output variable.
+Input: Suppose we want to pass some information to Terraform, then it is an input variable.
+Output: If we want Terraform to print a particular value in the output called Output variable.
 
     variable "example_var" {
       description = "An example input variable"
@@ -250,7 +251,7 @@ Output: If we want terraform to print a particular value in the output called as
 * type > specifies the data type of the variable (e.g., string, number, list, map, etc.).
 * default > provides a default value for the variable, which is optional.
 
-Example: A folder created Variable inside it main.tf and variable.tf created 
+Example: A folder created a Variable inside its main.tf and variable.tf created 
 
 ![image](https://github.com/user-attachments/assets/235bf903-6111-419d-a96f-371e035e2a36)
 
@@ -258,7 +259,7 @@ Example: A folder created Variable inside it main.tf and variable.tf created
 
 **Variables - Assign when Prompted**
 
-Note: We did not specify default value in Varible.tf so when we run the plan or apply command a prompt will appear to provide value. Main.tf is the same, no modifications.
+Note: We did not specify a default value in Variable.tf so when we run the plan or apply command a prompt will appear to provide value. Main.tf is the same, no modifications.
 
 ![image](https://github.com/user-attachments/assets/ce5cabfa-b91e-4369-a7e6-527dcf0973db)
 
@@ -275,6 +276,17 @@ Error in below snap, correct
 
 
 **Output Variables - Pending**
+
+**Conditional expressions**
+
+* Conditional expression in Terraform are used to define conditional logic within your configurations. They allow you to make decisions or set values based on conditions.
+* Conditional expressions are typically used to control whether resources are created or configured based on the evaluation of a condition.
+
+Syntax: condition ? true_val : false_val
+
+* condition: expression that evaluates to either true or false.
+* true_val: value that is returned if the condition is true.
+* false_val: value that is returned if the condition is false
 
 # Modules 
 
