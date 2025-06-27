@@ -282,7 +282,7 @@ Error in the below snap, correct
 
 Then, we have created a separate file to assign the variables. (to get the value of the variables)
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/30c8fb83-b033-4d00-ae10-78ee2b0f0fed)
 
 
 
@@ -290,16 +290,36 @@ Then, we have created a separate file to assign the variables. (to get the value
 
 **Conditional expressions**
 
-* Conditional expression in Terraform are used to define conditional logic within your configurations. They allow you to make decisions or set values based on conditions.
+* Conditional expressions in Terraform are used to define conditional logic within your configurations. They allow you to make decisions or set values based on conditions.
 * Conditional expressions are typically used to control whether resources are created or configured based on the evaluation of a condition.
 
-Syntax: condition ? true_val : false_val
+Syntax: condition? true_val : false_val
 
 * condition: expression that evaluates to either true or false.
 * true_val: value that is returned if the condition is true.
 * false_val: value that is returned if the condition is false
 
-# Modules 
+# Modules
+
+A Terraform module is a collection of standard configuration files in a dedicated directory. Terraform modules encapsulate groups of resources dedicated to one task, reducing the amount of code you have to develop for similar infrastructure components.
+
+**What is the difference between resources and modules in Terraform?**
+
+A resource in Terraform describes a piece of infrastructure that is going to be created (e.g., a VPC, a subnet, an EC2 instance, etc), whereas a module is a collection of resources that are used together to achieve a reusable use case.
+
+Here, in the below snap, I removed the contents of main.tf and reused the file
+
+![image](https://github.com/user-attachments/assets/2fc35b39-797c-4ca5-aefc-c2988b2d1b97)
+
+![image](https://github.com/user-attachments/assets/fd32031a-fe05-435c-95be-d32801374b7c)
+
+Using a modular approach, we can reuse the code by just changing the location and values.
+
+Note: Keep the main.tf in parent folder like Day-2 else it will throw error
+
+![Uploading image.png…]()
+
+
 
 # Terraform Commands:
     terraform init
