@@ -180,13 +180,13 @@ Use keyword 'alias' to implement multi region infra setup on terraform.
     resource "aws_instance" "example" {
       ami = "ami-058bd2d568351da34"
       instance_type = "t2.micro"
-      provider = "aws.us-east-1"
+      provider = "aws.us-east-1"        # aws.<provider-name>
     }
 
     resource "aws_instance" "example2" {
       ami = "ami-058bd2d568351da34"
       instance_type = "t2.micro"
-      provider = "aws.us-east-2"
+      provider = "aws.us-east-2"        # aws.<provider-name>
     }
 
 
