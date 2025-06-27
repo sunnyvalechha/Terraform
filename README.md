@@ -266,19 +266,25 @@ Note: We did not specify a default value in Variable.tf so when we run the plan 
 ![image](https://github.com/user-attachments/assets/6d3fca0a-1eab-47db-b894-3baa16b99529)
 
 
-**Varialble - Terraform.tfvars**
+**Variable - Terraform.tfvars**
 
-If the file name is terraform.tfvars, terraform will auto load the variables present in this file by overriding the default value in variables.tf even if we do not specify the variable value, the values taken from tfvars automatically.
+If the file name is terraform.tfvars, terraform will auto-load the variables present in this file by overriding the default value in variables.tf, even if we do not specify the variable value, the values are taken from tfvars automatically.
 
-Error in below snap, correct
+Error in the below snap, correct
 
 ![image](https://github.com/user-attachments/assets/3384fd1d-95da-4eb7-908d-fcccd6d716d4)
 
-Some more latest snaps
+**Some more recent snaps**
 
 ![image](https://github.com/user-attachments/assets/ae5b5adb-6a2e-44db-a16b-ff614cedd81e)
 
 ![image](https://github.com/user-attachments/assets/d5060645-7bca-4f76-8771-e5b80989593f)
+
+Then, we have created a separate file to assign the variables. (to get the value of the variables)
+
+![Uploading image.png…]()
+
+
 
 **Output Variables - Pending**
 
