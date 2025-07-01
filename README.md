@@ -343,7 +343,7 @@ Here, in the below snap, I removed the contents of main.tf and reused the file
 
 Using a modular approach, we can reuse the code by just changing the location and values.
 
-Note: Keep the main.tf in parent folder like Day-2 else it will throw error
+Note: Keep the main.tf in the parent folder like Day-2, else it will throwan error
 
 ![Uploading image.png…]()
 
@@ -352,9 +352,22 @@ Note: Keep the main.tf in parent folder like Day-2 else it will throw error
 
 The state file is the Heart of Terraform. Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real-world resources to your configuration, keep track of metadata, and improve performance for large infrastructures.
 
-Whenever we execute terraform apply or terraform plan, before applying it will go to the Terraform state file and check in the state file what infrastructure is already created and what new infrastructure it has to create, so using the state file, it will compare the difference. It will update the tag 
+Whenever we execute terraform apply or terraform plan, before applying it, it will go to the Terraform state file and check in the state file what infrastructure is already created and what new infrastructure it has to create, so using the state file, it will compare the difference. It will update the tag 
 
-**Drawbacks of state file:**
+**Drawbacks of the state file:**
+
+* Any resource we create through Terraform will be recorded in the state file. What if the information is sensitive? Some information we don't want to store, even if the passwords are stored in the state file.
+
+* If we store push the code (.tf) files in the GitHub then every time we made changes into the code we have to push the state file in the GitHub but there's are challenge that state file will only update when we apply changes, there is no changes in the architecture only changes have done in the code.
+
+* Remote Backend: This will solve the problem. Store the state file in an S3 bucket. Instead of creating a state file on a laptop or a virtual machine. A state file will be created on the S3 bucket. It will automatically update the state file once we run "terraform apply." Before that we need to run "terraform init" so Terraform will understand that here remote backend logic is applied and my state file is in the S3 bucket so let me get the information from there. Terraform will compare the difference between S3 bucket and GitHub repository (where code has stored) previously it was comparing the with local machine and GitHub repository.
+
+**There is other remote backend also**:
+
+* **Terraform cloud** If you are using then use Terraform Cloud itself.
+* **Azure storage** on the Azure cloud
+* **S3** on AWS
+
 
 
 
