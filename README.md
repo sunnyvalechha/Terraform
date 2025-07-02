@@ -94,12 +94,13 @@ Within the block, we can define the resource block, and inside the resource bloc
 Here, the resource name can be anything
 
 # Terraform Commands:
-    terraform init
-    terraform plan
-    terraform apply
-    terraform validate     #check for errors
-    terraform plan -out=/root/plan.txt
-    terraform --help
+    terraform init                        # Initialize the directory
+    terraform plan                        # Shows the plan for what changes will be made in the infrastructure
+    terraform apply                       # Apply the infra changes
+    terraform validate                    # check for errors
+    terraform plan -out=/root/plan.txt    # Give the plan of infra changes in a specific file
+    terraform show                        # Checks if state file is present
+    terraform --help                    
     terraform providers --help
     
 **All other commands:**
