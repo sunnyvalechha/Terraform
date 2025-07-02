@@ -346,7 +346,7 @@ Using a modular approach, we can reuse the code by just changing the location an
 
 Note: Keep the main.tf in the parent folder like Day-2, else it will throwan error
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/288b2dad-9f6d-49af-88f4-96bfcf6149fd)
 
 
 # Terraform State
@@ -361,15 +361,42 @@ Whenever we execute terraform apply or terraform plan, before applying it, it wi
 
 * If we store push the code (.tf) files in the GitHub then every time we made changes into the code we have to push the state file in the GitHub but there's are challenge that state file will only update when we apply changes, there is no changes in the architecture only changes have done in the code.
 
-* Remote Backend: This will solve the problem. Store the state file in an S3 bucket. Instead of creating a state file on a laptop or a virtual machine. A state file will be created on the S3 bucket. It will automatically update the state file once we run "terraform apply." Before that we need to run "terraform init" so Terraform will understand that here remote backend logic is applied and my state file is in the S3 bucket so let me get the information from there. Terraform will compare the difference between S3 bucket and GitHub repository (where code has stored) previously it was comparing the with local machine and GitHub repository.
+* Remote Backend: This will solve the problem. Store the state file in an S3 bucket, instead of creating a state file on a laptop or a virtual machine. A state file will be created on the S3 bucket. It will automatically update the state file once we run "terraform apply." Before that, we need to run "terraform init" so that Terraform will understand that here the remote backend logic is applied, and my state file is in the S3 bucket, so let me get the information from there. Terraform will compare the difference between the S3 bucket and the GitHub repository (where the code has stored). Previously, it was compared with the local machine and the GitHub repository. (Chances of error if someone forgets to push the state file to the repository)
 
-**There is other remote backend also**:
+**There are other remote backends also**:
 
-* **Terraform cloud** If you are using then use Terraform Cloud itself.
+* **Terraform Cloud** If you are using it, then use Terraform Cloud itself.
 * **Azure storage** on the Azure cloud
 * **S3** on AWS
 
+* Suppose now, if you run the terraform plan, it will show you that the infrastructure matches the configuration.
+* Delete the "terraform.tfstate"
+* Then, it will re-create the existing infrastructure because, according to Terraform, the infra is not created.
 
+**Let's use the RemoteBackend Logic:**
+
+* Create an S3 bucket through Terraform.
+* Create a new ".tf" file to specify a remote backend.
+* First, only create a bucket, then go for a remote backend.
+
+Sample:
+
+![image](https://github.com/user-attachments/assets/9e71352b-c553-478c-bdcf-9d1ed34eedab)
+
+![Uploading image.png…]()
+
+
+**State locking**
+
+* If supported by your backend, Terraform will lock your state for all operations that could write state. This prevents others from acquiring the lock and potentially corrupting your state.
+* State locking happens automatically on all operations that could write state. You do not see any message that it happens. If state locking fails, Terraform does not continue. You can disable state locking for most commands with the **-lock=false** flag, but we do not recommend it.
+* If acquiring the lock takes longer than expected, Terraform outputs a status message. If Terraform does not output a message, state locking is still occurring if your backend supports it.
+
+**Force Unlock**
+
+* Terraform has a force-unlock command to manually unlock the state if unlocking failed.
+* Be very careful with this command. If you unlock the state when someone else is holding the lock, it could cause multiple writers. Force unlock should only be used to unlock your own lock in situations where automatic unlocking failed.
+* To protect you, the **force-unlock** command requires a unique lock ID. Terraform will output this lock ID if unlocking fails. This lock ID acts as a nonce, ensuring that locks and unlocks target the correct lock.
 
 
 # Mutable and Immutable infrastructure
