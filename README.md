@@ -184,12 +184,12 @@ Terraform plan is a command that generates an execution plan that shows the chan
 
 # Providers
 
-Providers are plugins that help Terraform that where it has to create infrastructure. Without provider, it is not possible to create infrastructure.
+Providers are plugins that help Terraform that where it has to create infrastructure. Without a provider, it is not possible to create infrastructure.
 
 Providers are categorized into 3 parts:
-* Official Providers - These providers which Hashicorp actively maintains (Aws. Azure, Google, Kubernetes).
-* Partner Providers - Partners are only maintains the documentation, how anybody can create infra through terraform. (Alibaba cloud and Oracle cloud)
-* Community Providers - We can also provide the entire provider configuration, and opensource will maintain these providers. There is no official backing up by Hashicorp and Partner provider on this.
+* Official Providers - These providers, which Hashicorp actively maintains (AWS, Azure, Google, Kubernetes).
+* Partner Providers - Partners only maintain the documentation, and anybody can create infrastructure through Terraform. (Alibaba cloud and Oracle cloud)
+* Community Providers - We can also provide the entire provider configuration, and open source will maintain these providers. There is no official backing up by Hashicorp and the Partner provider on this.
 
 
 **Multiple Providers** - We can set multi-region infrastructure on Terraform.
@@ -383,8 +383,7 @@ Sample:
 
 ![image](https://github.com/user-attachments/assets/9e71352b-c553-478c-bdcf-9d1ed34eedab)
 
-![Uploading image.png…]()
-
+![image](https://github.com/user-attachments/assets/a2948525-f364-4c72-b9ca-cd538a472ce1)
 
 **State locking**
 
@@ -398,6 +397,7 @@ Sample:
 * Be very careful with this command. If you unlock the state when someone else is holding the lock, it could cause multiple writers. Force unlock should only be used to unlock your own lock in situations where automatic unlocking failed.
 * To protect you, the **force-unlock** command requires a unique lock ID. Terraform will output this lock ID if unlocking fails. This lock ID acts as a nonce, ensuring that locks and unlocks target the correct lock.
 
+It can be achieved through **"AWS Dynamo DB"**
 
 # Mutable and Immutable infrastructure
 
