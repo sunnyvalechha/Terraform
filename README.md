@@ -27,7 +27,7 @@
 * VScode plugin for Terraform: **Hashicorp Terraform** (Syntax highlighting and autocompletion for Terraform)
 * AWS Cli downlod URL for Windows: https://awscli.amazonaws.com/AWSCLIV2.msi
 * Terraform download on Windows: https://developer.hashicorp.com/terraform/install
-* An alternate playground to run the Terraform is **GitHub Codespaces**.
+
 
         Extract files once downloaded > Copy the terraform.exe file > Create a folder in the C drive (terraform-bins) > Paste the terraform.exe file > Copy folder location (C:\terraform-bins)
         Search for "Environment variables" > Click on "Environment variables" > Click on "Path" > Edit > New > Paste the location path (C:\terraform-bins) > OK > OK
@@ -38,6 +38,8 @@
 ![image](https://github.com/user-attachments/assets/c2b0c7e5-50df-477a-b91f-1515f41afa7d)
 
 ![image](https://github.com/user-attachments/assets/663c95d0-f0bc-4c76-aff7-fc4a4057d924)
+
+* An alternate playground to run the Terraform is **GitHub Codespaces**.
 
 * VScode: Restart VScode after following the above process, then check for the terraform version. Also, you might need to run the code in the folder (C:\terraform-bins)
 
