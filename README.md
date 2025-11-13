@@ -49,8 +49,8 @@
 * **Setup CodeSpaces**:
 
 - Go to GitHub >
-- Click on Code option from right > Under Codespaces > click on '+' Icon
-- Create Codespaces on main > On top search bar write "**> Add**" It give option like "Add dev container configuration files"
+- Click on Code option from right > Under Codespaces > click on '+' Icon > Create Codespaces on main
+- On top search bar write "**> Add**" It give option like "Add dev container configuration files"
 - Modify your active configurations
 - Search for Terraform (Tflint and TFGrunt)
 - A new file will be add below called devcontainers
