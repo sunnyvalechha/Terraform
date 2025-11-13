@@ -101,7 +101,7 @@
     version       # Show the current Terraform version
     workspace     # Workspace management
 
--- 
+-- Create Infra on Aws using terraform, let's say we need to create ec2 instance 
 
 
 # **4 things we need to understand to Master Terraform**.
