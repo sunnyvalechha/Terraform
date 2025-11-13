@@ -67,6 +67,10 @@
 ![image](https://github.com/user-attachments/assets/66f06163-5a6e-40ca-8476-98cca9940c6f)
 
 
+        aws --version
+        terraform --version
+
+
 # Terraform Commands:
 
     terraform init                        # Initialize the directory
