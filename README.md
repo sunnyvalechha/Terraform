@@ -70,10 +70,11 @@
 # Terraform Commands:
 
     terraform init                        # Initialize the directory
-    terraform plan                        # Shows the plan for what changes will be made in the infrastructure
-    terraform apply                       # Apply the infra changes
     terraform validate                    # check for errors
+    terraform plan                        # Shows the plan for what changes will be made in the infrastructure
     terraform plan -out=/root/plan.txt    # Give the plan of infra changes in a specific file
+    terraform apply                       # Apply the infra changes
+    terraform destroy                     # Destroy the infra
     terraform show                        # Checks if state file is present
     terraform --help                    
     terraform providers --help
@@ -99,6 +100,8 @@
     untaint       # Remove the 'tainted' state from a resource instance
     version       # Show the current Terraform version
     workspace     # Workspace management
+
+-- 
 
 
 # **4 things we need to understand to Master Terraform**.
