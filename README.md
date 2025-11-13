@@ -22,10 +22,6 @@
 6. Pulumi
 7. Salt
 
-* Why?
-
-
-
 # Plugins/Installations
 
 * VScode plugin for Terraform: Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
