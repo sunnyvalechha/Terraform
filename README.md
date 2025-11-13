@@ -67,6 +67,40 @@
 ![image](https://github.com/user-attachments/assets/66f06163-5a6e-40ca-8476-98cca9940c6f)
 
 
+# Terraform Commands:
+
+    terraform init                        # Initialize the directory
+    terraform plan                        # Shows the plan for what changes will be made in the infrastructure
+    terraform apply                       # Apply the infra changes
+    terraform validate                    # check for errors
+    terraform plan -out=/root/plan.txt    # Give the plan of infra changes in a specific file
+    terraform show                        # Checks if state file is present
+    terraform --help                    
+    terraform providers --help
+    
+# All other commands
+
+    console       # Try Terraform expressions at an interactive command prompt
+    fmt           # Reformat your configuration in the standard style
+    force-unlock  # Release a stuck lock on the current workspace
+    get           # Install or upgrade remote Terraform modules
+    graph         # Generate a Graphviz graph of the steps in an operation
+    import        # Associate existing infrastructure with a Terraform resource
+    login         # Obtain and save credentials for a remote host
+    logout        # Remove locally-stored credentials for a remote host
+    metadata      # Metadata related commands
+    output        # Show output values from your root module
+    providers     # Show the providers required for this configuration
+    refresh       # Update the state to match remote systems
+    show          # Show the current state or a saved plan
+    state         # Advanced state management
+    taint         # Mark a resource instance as not fully functional
+    test          # Experimental support for module integration testing
+    untaint       # Remove the 'tainted' state from a resource instance
+    version       # Show the current Terraform version
+    workspace     # Workspace management
+
+
 # **4 things we need to understand to Master Terraform**.
 
 1. Block
@@ -100,37 +134,7 @@ Within the block, we can define the resource block, and inside the resource bloc
 
 Here, the resource name can be anything
 
-# Terraform Commands:
-    terraform init                        # Initialize the directory
-    terraform plan                        # Shows the plan for what changes will be made in the infrastructure
-    terraform apply                       # Apply the infra changes
-    terraform validate                    # check for errors
-    terraform plan -out=/root/plan.txt    # Give the plan of infra changes in a specific file
-    terraform show                        # Checks if state file is present
-    terraform --help                    
-    terraform providers --help
-    
-**All other commands:**
 
-    console       # Try Terraform expressions at an interactive command prompt
-    fmt           # Reformat your configuration in the standard style
-    force-unlock  # Release a stuck lock on the current workspace
-    get           # Install or upgrade remote Terraform modules
-    graph         # Generate a Graphviz graph of the steps in an operation
-    import        # Associate existing infrastructure with a Terraform resource
-    login         # Obtain and save credentials for a remote host
-    logout        # Remove locally-stored credentials for a remote host
-    metadata      # Metadata related commands
-    output        # Show output values from your root module
-    providers     # Show the providers required for this configuration
-    refresh       # Update the state to match remote systems
-    show          # Show the current state or a saved plan
-    state         # Advanced state management
-    taint         # Mark a resource instance as not fully functional
-    test          # Experimental support for module integration testing
-    untaint       # Remove the 'tainted' state from a resource instance
-    version       # Show the current Terraform version
-    workspace     # Workspace management
 
 **Types of Blocks in Terraform / Top-level blocks**
 
