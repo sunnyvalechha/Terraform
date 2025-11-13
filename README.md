@@ -4,6 +4,14 @@
 
 * Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently.
 * This includes low-level components like compute instances, storage, and networking, and high-level components like DNS entries and SaaS features.
+- In all the above options, we have to stick only to the specific platform, but Terraform can run on all clouds and on any platform.
+- It is not defined only for a specific platform. As a DevOps engineer, it is difficult to learn different tools just for 1 purpose.
+- Terraform has a universal approach.
+- Terraform can automate infrastructure on any cloud and on on-premise environment.
+- Terraform helps us to harden the server. **Server hardening** is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
+- Terraform uses **HashiCorp Configuration Language** (HCL), a human-readable language that can be written in JSON or YAML.
+- Terraform helps us create highly available infrastructure. which is difficult to create manually.
+- Terraform uses an API as a code approach, meaning if we want to automate the infrastructure on AWS, Terraform will talk to the AWS API's and apply these API's and create infrastructure.
 
 **Alternatives/Competitors of Terraform**
 1. AWS - CloudFormation Template
@@ -16,14 +24,6 @@
 
 * Why?
 
-- In all the above options, we have to stick only to the specific platform, but Terraform can run on all clouds and on any platform.
-- It is not defined only for a specific platform. As a DevOps engineer, it is difficult to learn different tools just for 1 purpose.
-- Terraform has a universal approach.
-- Terraform can automate infrastructure on any cloud and on on-premise environment.
-- Terraform helps us to harden the server. **Server hardening** is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
-- Terraform uses **HashiCorp Configuration Language** (HCL), a human-readable language that can be written in JSON or YAML.
-- Terraform helps us create highly available infrastructure. which is difficult to create manually.
-- Terraform uses an API as a code approach, meaning if we want to automate the infrastructure on AWS, Terraform will talk to the AWS API's and apply these API's and create infrastructure.
 
 
 # Plugins/Installations
