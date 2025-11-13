@@ -101,7 +101,19 @@
     version       # Show the current Terraform version
     workspace     # Workspace management
 
--- Create Infra on Aws using terraform, let's say we need to create ec2 instance 
+# Create Infra on Aws 
+
+* let's say we need to create ec2 instance, for that we need an AMI ID
+* Manually launch Instance - Select any Image - Description - Copy AMI ID (ami-03695d52f0d883f65)
+* key pair - Note (hp-office)
+* Region - Note (ap-south-1)
+
+
+
+
+
+
+
 
 
 # **4 things we need to understand to Master Terraform**.
