@@ -1,55 +1,64 @@
-Ref-Repository: https://github.com/iam-veeramalla/terraform-zero-to-hero
+# Ref-Repository: https://github.com/iam-veeramalla/terraform-zero-to-hero
 
-**Terraform** is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently. This includes low-level components like compute instances, storage, and networking, and high-level components like DNS entries and SaaS features.
+# What and Why? 
 
-**Alternatives to Terraform / Competitors of Terraform**
-1. AWS CloudFormation Template
-2. Azure Resource Manager
-3. Google Cloud Deployment Manager
-4. OpenStack Heat Templates
+* Terraform is an infrastructure as code (IAC) tool that lets you build, change, and version infrastructure safely and efficiently.
+* This includes low-level components like compute instances, storage, and networking, and high-level components like DNS entries and SaaS features.
+
+**Alternatives/Competitors of Terraform**
+1. AWS - CloudFormation Template
+2. Azure - Resource Manager
+3. Google - Cloud Deployment Manager
+4. OpenStack - Heat Templates
 5. Crossplane
 6. Pulumi
 7. Salt
 
-**Why Terraform?**
+* Why?
 
-In all the above options, we have to stick only to the specific platform, but Terraform can run on all clouds and any platform. It is not defined only for a specific platform. As a DevOps engineer, it is difficult to learn different tools just for 1 purpose. Terraform has a universal approach. Terraform can automate infrastructure on any cloud and on-prem environment.
+- In all the above options, we have to stick only to the specific platform, but Terraform can run on all clouds and on any platform.
+- It is not defined only for a specific platform. As a DevOps engineer, it is difficult to learn different tools just for 1 purpose.
+- Terraform has a universal approach.
+- Terraform can automate infrastructure on any cloud and on on-premise environment.
+- Terraform helps us to harden the server. **Server hardening** is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
+- Terraform uses **HashiCorp Configuration Language** (HCL), a human-readable language that can be written in JSON or YAML.
+- Terraform helps us create highly available infrastructure. which is difficult to create manually.
+- Terraform uses an API as a code approach, meaning if we want to automate the infrastructure on AWS, Terraform will talk to the AWS API's and apply these API's and create infrastructure.
 
-Terraform helps us to harden the server.
 
-**Server hardening** is the process of identifying security vulnerabilities in a Linux server and then making changes to reduce them. Also, if all the infrastructure details are written in a file and used this file as a code that becomes 'hardened'.
+# Plugins/Installations
 
-Terraform uses HashiCorp Configuration Language (HCL), a human-readable language that can be written in JSON or YAML.
+* VScode plugin for Terraform: Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
+* AWS Cli downlod URL for Windows: https://awscli.amazonaws.com/AWSCLIV2.msi
+* Terraform download on Windows: https://developer.hashicorp.com/terraform/install
+* An alternate playground to run the Terraform is **GitHub Codespaces**.
 
-Terraform helps us create highly available infrastructure. It is difficult to create.
-
-Terraform uses an API as a code approach, meaning if we want to automate the infrastructure on AWS, Terraform will talk to the AWS API's and apply these API's and create infrastructure.
-
-**VScode plugin for Terraform:** Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
-
-**AWS Cli:** https://awscli.amazonaws.com/AWSCLIV2.msi
-
-**Terraform download on Windows**: https://developer.hashicorp.com/terraform/install
-
-* Extract files once downloaded > Copy the terraform.exe file > Create a folder in the C drive (terraform-bins) > Paste the terraform.exe file > Copy folder location (C:\terraform-bins)
-* Search for "Environment variables" > Click on "Environment variables" > Click on "Path" > Edit > New > Paste the location path (C:\terraform-bins) > OK > OK
-* Open cmd prompt > Run "terraform version"
-* Must get the version number
-* Same time verify the AWS Cli also
+        Extract files once downloaded > Copy the terraform.exe file > Create a folder in the C drive (terraform-bins) > Paste the terraform.exe file > Copy folder location (C:\terraform-bins)
+        Search for "Environment variables" > Click on "Environment variables" > Click on "Path" > Edit > New > Paste the location path (C:\terraform-bins) > OK > OK
+        Open cmd prompt > Run "terraform version"
+        Must get the version number
+        Same time verify the AWS Cli also
 
 ![image](https://github.com/user-attachments/assets/c2b0c7e5-50df-477a-b91f-1515f41afa7d)
 
 ![image](https://github.com/user-attachments/assets/663c95d0-f0bc-4c76-aff7-fc4a4057d924)
 
-**VScode**: Restart VScode after following the above process, then check for the terraform version. Also, you might need to run the code in the folder (C:\terraform-bins)
+* VScode: Restart VScode after following the above process, then check for the terraform version. Also, you might need to run the code in the folder (C:\terraform-bins)
 
 ![image](https://github.com/user-attachments/assets/fbec6dcf-c09a-4328-af26-0b2577d4e0db)
 
-**An alternate playground to run the Terraform is GitHub Codespaces**
 
-**Setup CodeSpaces**:
+* **Setup CodeSpaces**:
 
-Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > Create Codespaces on main > On top search bar write "**> Add**" It give option like "Add dev container configuration files" > Modify your active configurations > Search for Terraform (Tflint and TFGrunt) > A new file will be add below called devcontainers > but terraform still not installed > **Same step do for AWS.** '> Add dev container configuration files' > rebuild > rebuild container > OK 
+- Go to GitHub >
+- Click on Code option from right > Under Codespaces > click on '+' Icon
+- Create Codespaces on main > On top search bar write "**> Add**" It give option like "Add dev container configuration files"
+- Modify your active configurations
+- Search for Terraform (Tflint and TFGrunt)
+- A new file will be add below called devcontainers
+- but terraform still not installed
+- Same step do for AWS "**> Add**" Add dev container configuration files' >  Aws CLI
+- "**> Add**" Add dev container configuration files' rebuild > rebuild container > OK 
 
 ![image](https://github.com/user-attachments/assets/e2b9a1b8-3751-4b35-a661-90b75a83b9d3)
 
@@ -60,7 +69,7 @@ Go to GitHub > Click on Code option from right > Under Codespaces > '+' Icon > C
 ![image](https://github.com/user-attachments/assets/66f06163-5a6e-40ca-8476-98cca9940c6f)
 
 
-**4 things we need to understand to Master Terraform**.
+# **4 things we need to understand to Master Terraform**.
 
 1. Block
 2. Arguments
