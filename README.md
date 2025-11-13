@@ -24,7 +24,7 @@
 
 # Plugins/Installations
 
-* VScode plugin for Terraform: Hashicorp Terraform (Syntax highlighting and autocompletion for Terraform)
+* VScode plugin for Terraform: **Hashicorp Terraform** (Syntax highlighting and autocompletion for Terraform)
 * AWS Cli downlod URL for Windows: https://awscli.amazonaws.com/AWSCLIV2.msi
 * Terraform download on Windows: https://developer.hashicorp.com/terraform/install
 * An alternate playground to run the Terraform is **GitHub Codespaces**.
