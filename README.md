@@ -39,12 +39,12 @@
 
 ![image](https://github.com/user-attachments/assets/663c95d0-f0bc-4c76-aff7-fc4a4057d924)
 
-* An alternate playground to run the Terraform is **GitHub Codespaces**.
-
 * VScode: Restart VScode after following the above process, then check for the terraform version. Also, you might need to run the code in the folder (C:\terraform-bins)
 
 ![image](https://github.com/user-attachments/assets/fbec6dcf-c09a-4328-af26-0b2577d4e0db)
 
+
+-- An alternate playground to run the Terraform is **GitHub Codespaces**.
 
 * **Setup CodeSpaces**:
 
