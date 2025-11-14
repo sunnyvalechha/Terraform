@@ -112,9 +112,27 @@
 * key pair - Note (hp-office)
 * Region - Note (ap-south-1)
 
+**Code**
 
-
-
+        terraform {
+          required_providers {
+            aws = {
+              version = "~> 4.50"
+              source = "hashicorp/aws"
+            }
+          }
+        }
+        provider "aws" {
+          region = "ap-south-1"
+        }
+        resource "aws_instance" "test-terra-intance" {
+          ami = "ami-03695d52f0d883f65"
+          instance_type = "t2.micro"
+          key_name = "hp-office"
+          tags = {
+            Name = "terra-instance"
+          }
+        }
 
 
 
