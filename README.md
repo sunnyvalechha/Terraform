@@ -96,6 +96,7 @@ Setup AWS CLI:
     terraform show                        # Checks if state file is present
     terraform --help                    
     terraform providers --help
+    terraform output                      # show all outputs, if we have created output block 
     
 # All other commands
 
